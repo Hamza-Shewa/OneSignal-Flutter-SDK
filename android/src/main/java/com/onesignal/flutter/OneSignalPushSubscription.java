@@ -22,8 +22,7 @@ import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
-
+ 
 public class OneSignalPushSubscription extends FlutterRegistrarResponder implements MethodCallHandler, IPushSubscriptionObserver {
 
     static void registerWith(BinaryMessenger messenger) {
