@@ -93,16 +93,6 @@ public class OneSignalPlugin extends FlutterRegistrarResponder implements Flutte
     final OneSignalPlugin plugin = new OneSignalPlugin();
     plugin.init(registrar.activeContext(), registrar.messenger());
 
-    // Create a callback for the flutterRegistrar to connect the applications onDestroy
-    registrar.addViewDestroyListener(new PluginRegistry.ViewDestroyListener() {
-      @Override
-      public boolean onViewDestroy(FlutterNativeView flutterNativeView) {
-        // Remove all handlers so they aren't triggered with wrong context
-        plugin.onDetachedFromEngine();
-        return false;
-      }
-    });
-  }
 
   @Override
   public void onMethodCall(MethodCall call, Result result) {
